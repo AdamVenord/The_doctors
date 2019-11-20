@@ -1,0 +1,11 @@
+<h1>Offices</h1>
+<%= link_to 'Add Office', new_office_path %>
+<hr />
+<h2><%= @offices.length <= 0 ? "No Offices" : "" %></h2> 
+<ul>
+  <% @offices.each do |office| %>
+    <li>
+      <%= link_to office.name, office %>
+    </li>
+  <% end %>
+</ul>
